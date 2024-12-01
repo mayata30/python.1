@@ -1,0 +1,9 @@
+def fibonacci(n):
+    if n==0 or n==1:
+        return n
+    else:
+        return fibonacci(n-1)+fibonacci(n-2)
+n=int(input("enter the no:of fibonacci to generate"))
+for i in range(n):
+    print(fibonacci(i),end='')
+print("\nthe",n,"th fibonacci is:",fibonacci(n-1))
