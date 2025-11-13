@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:gravity="center_horizontal">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/TextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simple Calculator"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold" />
+
+    <!-- First Input Field -->
+    <EditText
+        android:id="@+id/EditText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter first number"
+        android:inputType="numberDecimal"
+        android:layout_margin="10dp" />
+
+    <!-- Second Input Field -->
+    <EditText
+        android:id="@+id/EditText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter second number"
+        android:inputType="numberDecimal"
+        android:layout_margin="10dp" />
+
+    <TextView
+        android:id="@+id/TextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result will be appear here"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
+
+    <!-- Grid of Buttons -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="4"
+        android:columnCount="4"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="1"
+            android:textSize="18sp"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="2"
+            android:textSize="18sp"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="3"
+            android:textSize="18sp"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/buttonDiv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="/"
+            android:textSize="18sp"
+            android:onClick="onOperatorClick" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="4"
+            android:textSize="18sp"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="5"
+            android:textSize="18sp"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="6"
+            android:textSize="18sp"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/buttonMul"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="*"
+            android:textSize="18sp"
+            android:onClick="onOperatorClick" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="7"
+            android:textSize="18sp"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="8"
+            android:textSize="18sp"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="9"
+            android:textSize="18sp"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/buttonSub"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="-"
+            android:textSize="18sp"
+            android:onClick="onOperatorClick" />
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="0"
+            android:textSize="18sp"
+            android:onClick="onDigitClick" />
+
+        <Button
+            android:id="@+id/buttonDot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="C"
+            android:textSize="18sp"
+            android:onClick="onClearClick" />
+
+        <Button
+            android:id="@+id/buttonEqual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="="
+            android:textSize="18sp"
+            android:onClick="onEqualsClick" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="+"
+            android:textSize="18sp"
+            android:onClick="onOperatorClick" />
+    </GridLayout>
+</LinearLayout>
+
+
+
+  package com.example.calculater;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    private EditText EditText1, EditText2;
+    private TextView TextView1,TextView2;
+    private String operator = "";
+
+    @SuppressLint("MissingInflatedId")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        EditText1 = findViewById(R.id.EditText1);
+        EditText2 = findViewById(R.id.EditText2);
+        TextView1 = findViewById(R.id.TextView1);
+        TextView2 = findViewById(R.id.TextView2);
+    }
+
+    // Operator button click (+, -, *, /)
+    public void onOperatorClick(View view) {
+        operator = ((Button) view).getText().toString();
+        Toast.makeText(this, "Selected Operator: " + operator, Toast.LENGTH_SHORT).show();
+    }
+
+    // Equals button click (=)
+    public void onEqualsClick(View view) {
+        String input1 = EditText1.getText().toString().trim();
+        String input2 = EditText2.getText().toString().trim();
+
+        // Check if any input field is empty
+        if (input1.isEmpty() || input2.isEmpty()) {
+            TextView2.setText("❌ Please enter both numbers");
+            return;
+        }
+
+        try {
+            double num1 = Double.parseDouble(input1);
+            double num2 = Double.parseDouble(input2);
+            double result;
+
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    if (num2 == 0) {
+                        TextView2.setText("❌ Cannot divide by zero");
+                        return;
+                    }
+                    result = num1 / num2;
+                    break;
+                default:
+                    TextView2.setText("❌ Please select an operator");
+                    return;
+            }
+
+            TextView2.setText("✅ Result: " + result);
+
+        } catch (NumberFormatException e) {
+            TextView2.setText("❌ Invalid input format");
+        }
+    }
+
+    // Clear button click (C)
+    public void onClearClick(View view) {
+        EditText1.setText("");
+        EditText2.setText("");
+        TextView1.setText("Simple Calculator");
+        operator = "";
+    }
+
+    // (Optional) Number button click — appends digits to currently focused field
+    public void onDigitClick(View view) {
+        Button button = (Button) view;
+        View focusedView = getCurrentFocus();
+
+        if (focusedView instanceof EditText) {
+            ((EditText) focusedView).append(button.getText().toString());
+        }
+    }
+}
